@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Expanded&display=swap');
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Encode Sans Semi Expanded', sans-serif;
+    padding: 0 10px;
+}
+
+nav{
+    position: relative;
+}
+
+.navCenter{
+    display: flex;
+    align-items: center;
+    padding-top: 19px;
+}
+
+.navLinks{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid gray;
+    padding: 5px 5px 5px 15px;
+    border-radius: 30px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: white;
+}
+
+.navLinks ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#contact{
+    background-color: black;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 30px;
+}
+
+@media screen and (min-width:800px){
+    body{
+        padding: 0 40px;
+    }
+
+    .navHeader h3{
+        font-size: 1.5rem;
+    }
+
+    .navLinks{
+        right: 30px;
+    }
+
+    .navLinks ul li{
+        font-size: 1.2rem;
+    }
+}
+
+header{
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+header h1{
+    font-size: 3.2rem;
+    line-height: 48px;
+}
+
+header p{
+    font-size: 1.3rem;
+}
+
+.featured{
+    margin-top: 80px;
+}
+
+.featuredHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.featuredHeader h1{
+    font-size: 2.2rem;
+}
+
+.featuredIcons{
+    display: flex;
+    gap: 50px;
+}
+
+.featuredIcons span {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.featuredImageContainer{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 90%;
+    gap: 15px;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
+}
+
+.featuredImageContainer::-webkit-scrollbar{
+    display: none;
+}
+
+.featuredContent{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.featuredImage{
+    width: 100%;
+    height: 350px;
+}
+
+.featuredImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid black;
+    border-radius: 3px;
+    margin-top: 20px;
+}
+
+.line{
+    height: 1px;
+    border: 0.5px solid black;
+}
+
+.featuredInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+@media screen and (min-width:800px){
+    header h1{
+        max-width: 85%;
+        font-size: 9.91rem;
+        line-height: 137px;
+        overflow-wrap: break-word;  
+        word-wrap: break-word; 
+        word-break: break-word;
+    }
+
+    header{
+        gap: 50px;
+    }
+
+    header p{
+        font-size: 1.7rem;
+        max-width: 50%;
+        overflow-wrap: break-word;  
+        word-wrap: break-word; 
+        word-break: break-word;
+    }
+
+    .featuredHeader h1{
+        font-size: 4rem;
+    }
+
+    .featuredInfo{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .featuredImage{
+        height: 700px;
+    }
+}
+
+.build, .design, .development, .client, .contact, .footer{
+    margin-top: 50px;
+}
+
+.buildHeader, .designHeader, .developmentHeader, .clientHeader, .contactHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.buildHeader h1, .designHeader h1, .developmentHeader h1, .clientHeader h1, .contactHeader h1{
+    font-size: 2rem;
+}
+
+.buildContentContainer, .designContentContainer, .developmentContentContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.buildContent, .designContent, .developmentContent{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.buildContent h3, .designContent h3, .developmentContent h3{
+    font-size: 1.4rem;
+}
+
+.buildContent p, .designContent p, .developmentContent p{
+    margin: 10px 0 40px 0;
+}
+
+@media screen and (min-width:800px){
+  .buildContentContainer, .developmentContentContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .buildHeader h1, .designHeader h1, .developmentHeader h1, .clientHeader h1, .contactHeader h1{
+    font-size: 3rem;
+  }
+
+  .buildContent h3, .designContent h3, .developmentContent h3{
+    font-size: 2rem;
+  }
+
+  .buildContent p, .designContent p, .developmentContent p{
+    font-size: 1.1rem;
+  }
+
+  .designContentContainer{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 32%;
+  }
+}
+
+.clientContentContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.clientContent{
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    border-radius: 5px;
+    font-size: 1.4rem;
+}
+
+@media screen and (min-width:1000px){
+   .clientContentContainer{
+    grid-template-columns: repeat(4,1fr);
+   } 
+
+   .clientContent{
+    font-size: 2rem;
+   }
+}
+
+.contactHeader{
+    margin-bottom: 5px;
+}
+
+.contact form{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    margin-top: 50px;
+}
+
+.formDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.contact form input{
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid black;
+    outline: none;
+    padding-bottom: 5px;
+    font-size: 1.05rem;
+}
+
+.contact form input::placeholder{
+    color: inherit;
+}
+
+.contact form button{
+    width: max-content;
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1.05rem;
+    cursor: pointer;
+}
+
+@media screen and (min-width:900px){
+    .contact form input{
+        font-size: 1.2rem;
+    }
+
+    .formDiv{
+        flex-direction: row;
+        gap: 20px;
+        width: 50%;
+    }
+
+    .formDiv input{
+        flex: 1;
+    }
+
+    #message{
+        width: 50%;
+    }
+
+    .contact form button{
+        padding: 10px 30px;
+        font-size: 1.2rem;
+    }
+}
+
+.footer{
+    padding-bottom: 60px;
+}
+
+.footerContentContainer{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.footerLinks{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footerLinks a{
+    text-decoration: none;
+    color: inherit;
+}
+
+@media screen and (min-width:800px){
+   .footerContentContainer{
+    flex-direction: row;
+    justify-content: space-between;
+   }
+   
+   .footerLogo{
+    font-size: 1.2rem;
+   }
+
+   .footerLinks{
+    gap: 20px;
+   }
+
+   .footerLinks a{
+    font-size: 1.2rem;
+   }
+}
